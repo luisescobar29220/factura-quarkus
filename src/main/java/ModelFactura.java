@@ -50,6 +50,13 @@ public class ModelFactura {
     public void setTotalF(Double totalF) {
         this.totalF = totalF;
     }
+    public void setCliente(ModelCliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public void setProducto(ModelProducto producto) {
+        this.producto = producto;
+    }
 
     public ModelFactura(Long id, LocalDate createF, Double totalF) {
         this.id = id;
