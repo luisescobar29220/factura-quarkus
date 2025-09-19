@@ -1,8 +1,10 @@
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 
 import java.util.List;
 
+@Transactional
 @ApplicationScoped
 public class ClienteService {
 
@@ -34,16 +36,14 @@ public class ClienteService {
     public ModelCliente actualizarCliente(Long id, ModelCliente cliente) {
         ModelCliente clienteExistente = this.buscarId(id);
         if (clienteExistente != null) {
-            // Actualiza los campos que quieras
             clienteExistente.setNameC(cliente.getNameC());
             clienteExistente.setRucC(cliente.getRucC());
             clienteExistente.setEmailC(cliente.getEmailC());
             clienteExistente.setCelular(cliente.getCelular());
             clienteExistente.setDireccionC(cliente.getDireccionC());
-
-            clienteRepository.persist(clienteExistente);
-            return clienteExistente;
+            return clienteExistente; // no hace falta persist
         }
         return null;
     }
+
 }

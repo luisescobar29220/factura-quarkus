@@ -50,7 +50,7 @@ public class ModelFactura {
     public void setTotalF(Double totalF) {
         this.totalF = totalF;
     }
-<<<<<<< HEAD
+
     public void setCliente(ModelCliente cliente) {
         this.cliente = cliente;
     }
@@ -58,8 +58,7 @@ public class ModelFactura {
     public void setProducto(ModelProducto producto) {
         this.producto = producto;
     }
-=======
->>>>>>> 01a66660be94b083f99cdfd2dc5801f957b6f604
+
 
     public ModelFactura(Long id, LocalDate createF, Double totalF) {
         this.id = id;
