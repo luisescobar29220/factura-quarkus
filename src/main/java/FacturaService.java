@@ -23,7 +23,7 @@ public class FacturaService {
     }
 
     // Buscar factura por ID
-    public ModelFactura buscarId(Long id) {
+    public ModelFactura obtenerFacturaPorId(Long id) {
         return facturaRepository.findById(id);
     }
 

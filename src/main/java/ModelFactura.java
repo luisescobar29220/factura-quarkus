@@ -27,6 +27,14 @@ public class ModelFactura {
     @JoinColumn(name = "cliente_id")
     private ModelCliente cliente;
 
+    public ModelCliente getCliente() {   // 👈 AÑADIDO
+        return cliente;
+    }
+
+    public ModelProducto getProducto() { // 👈 AÑADIDO
+        return producto;
+    }
+
     public Long getId() {
         return id;
     }
